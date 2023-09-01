@@ -97,6 +97,9 @@ body {
 
 .poke-tags {
     list-style: none;
+    align-self: flex-start;
+    margin-top: 8px;
+    margin-right: 8px;
     
 }
 
