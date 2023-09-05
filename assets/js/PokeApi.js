@@ -1,7 +1,7 @@
 async function getPokemon(pokemon) {
     const pokemonUrlFetched = await fetch(pokemon.url)
     const pokemonJson = await pokemonUrlFetched.json()
-    return new Pokemon(pokemonJson)
+    return new Pokemon(pokemonJson, pokemon.url)
 
 }
 

@@ -1,5 +1,6 @@
 function pokemonToLi(pokemon) {
     console.log(pokemon.types)
+
     return `
     <li class="pokemon ${pokemon.type}">
     <p class="poke-number">${pokemon.id}</p>

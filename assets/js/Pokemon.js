@@ -1,11 +1,13 @@
 class Pokemon {
     name;
     id;
-    types =[]
-    type
+    types =[];
+    type;
     image;
+    url;
 
-    constructor(pokemon) {
+    constructor(pokemon, url) {
+        
         this.name = pokemon.name
         this.id = pokemon.id
 
@@ -14,7 +16,7 @@ class Pokemon {
         }
 
         [this.type] = this.types
-
+        this.url = url
         console.log(this.types)
         this.image = pokemon.sprites.other.home.front_default
     }
