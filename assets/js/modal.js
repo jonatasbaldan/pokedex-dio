@@ -12,7 +12,7 @@ pokeList.addEventListener("click", () => {
 
         for(element of btn) {
             element.addEventListener("click", () => {
-                console.log("clicked")
+                console.log("clicked");
                 modal.style.display = "block";
             })
         }
@@ -27,4 +27,8 @@ window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
+}
+
+function modalInfo(pokemon) {
+
 }
