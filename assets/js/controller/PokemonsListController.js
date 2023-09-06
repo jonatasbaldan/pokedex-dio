@@ -11,10 +11,25 @@ class PokemonsListController {
         this._urlComplete = `${this._urlApi}?offset=${this.offset}&limit=${this._limit}`;
     }
 
+    _addEventListenersToPokemons() {
+        const pokeList = document.querySelector(".poke-list");
+        if (pokeList.hasChildNodes()) {
+            pokeList
+            .childNodes
+            .forEach(element => element.addEventListener("click", (event) => {
+                const modalController = new ModalController();
+                modalController.openModal(event);
+            }));
+        }
+    }
+
     async addMorePokemons() {
         const listOfPokemons = await PokeApi.getAllPokemons(this._urlComplete);
+
         const pokemonsCardsView = new PokemonsCardsView("poke-list");
         pokemonsCardsView.update(listOfPokemons);
+
+        this._addEventListenersToPokemons();
     }
 
     set offset(number) {
