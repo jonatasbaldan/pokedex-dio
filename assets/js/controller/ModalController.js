@@ -1,9 +1,11 @@
 class ModalController {
+
     constructor() {
         this.$ = document.querySelector.bind(document);
         this._modal = this.$(".modal");
         this._span = this.$(".close");
         this._pokeInfo = this.$(".poke-info");
+        this._currentElement = null;
         this._closeModal();
     }
 
@@ -26,12 +28,13 @@ class ModalController {
 
     openModal(event) {
         console.log(event);
-        const parent = event.srcElement.parentElement;
-        console.log(parent);
+        this._currentElement = event.currentTarget;
+
+        console.log(this._currentElement);
         this._modal.style.display = "block";
     }
 
-    displayPokeInfo() {
-
+    addPokeInfo() {
+        
     }
 }
