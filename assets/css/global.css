@@ -136,11 +136,12 @@ body {
 
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto;
+    margin: 5% auto;
     padding: 20px;
     border: 1px solid #888;
-    border-radius: .5rem;
+    border-radius: 1rem;
     width: 80%;
+    max-width: 500px;
 }
 
 .close {
@@ -155,6 +156,33 @@ body {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+.poke-info {
+    padding: 20px;
+
+}
+
+.modal-image {
+    width: 100%;
+    max-width: 250px;
+    display: block;
+    margin: 0 auto;
+}
+
+.modal-name {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-top: 30px;
+}
+
+.modal-types-ol {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 15px;
+    list-style: none;
 }
 
 

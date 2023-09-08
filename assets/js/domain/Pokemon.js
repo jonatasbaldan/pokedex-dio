@@ -33,8 +33,4 @@ class Pokemon {
     get types() {
         return this._types;
     }
-
-    get stats() {
-        return this._stats;
-    }
 }
